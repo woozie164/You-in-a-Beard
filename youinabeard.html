@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset='utf-8' />  
+  <title>You in a Beard</title>
+  <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="youinabeard.css">
+  </head>
+<body>
+  <h1>You in a Beard</h1>
+  <h2>About the app</h2>
+  <p>Finally, the answer to the age old question "would I look good in this beard?" is here: <i>You in a Beard</i>!</p>
+  <p>Let your beard styling dreams come true! Don't be limited to how fast your beard grows; now you can try out a multitude of stylish options in a manner of seconds. Then, you can show of your new style to your facebook friends.</p>
+  <p>Try <i>You in a Beard</i> today!</p>
+  <div id="appcontainer">
+    <div id="beardcontainer">
+      <img id='beard'src="beards/beard.png">
+      <div class="ui-resizable-handle ui-resizable-nw" id="nwgrip"></div>
+      <div class="ui-resizable-handle ui-resizable-ne" id="negrip"></div>
+      <div class="ui-resizable-handle ui-resizable-sw" id="swgrip"></div>
+      <div class="ui-resizable-handle ui-resizable-se" id="segrip"></div>
+      <div class="ui-resizable-handle ui-resizable-n" id="ngrip"></div>
+      <div class="ui-resizable-handle ui-resizable-s" id="sgrip"></div>
+      <div class="ui-resizable-handle ui-resizable-e" id="egrip"></div>
+      <div class="ui-resizable-handle ui-resizable-w" id="wgrip"></div>
+    </div>
+    <canvas id="beardapp"></canvas>
+  </div>
+</body>
+<script src="../jquery.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="youinabeard.js"></script>
+</html>
