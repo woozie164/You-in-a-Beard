@@ -1,0 +1,51 @@
+﻿<html>
+	<head>
+	<meta charset='utf-8' />
+	<title>Redovisningstext till Kmom10</title>
+	</head>
+<body>
+	<h1>Kursmoment 10</h1>
+	<h2>Min produkt</h2>
+	<p>Som projekt har jag gjort en Facebook-app. "You in a Beard" är en photomanipuleringsapp där man kan ta sin profilbild och lägga på skägg eller mustasch. Sen kan man spara bilden till fil eller använda den som profilbild.</p>
+	<p>
+		<a href='https://apps.facebook.com/you-in-a-beard/'>apps.facebook.com/you-in-a-beard/</a>
+	</p>
+	<h2>Krav 1</h2>
+	<p>Denna del av projektkravet har tre delkrav:</p>
+	<ol>
+		<li>En presentation av vad din “produkt” gör, vilket problem den löser.</li>
+		<li>Instruktioner hur man installerar, konfigurerar och använder “produkten”.</li>
+		<li>Källkoden skall finnas på GitHub.</li>					
+	</ol>
+	<p>Krav 1.1 presenteras på <a href='http://www.student.bth.se/~malx12/javascript/Projekt/about.html'>about.html</a>. Tanken bakom appen är att man ska snabbt kunna testa många olika skägg. Vilket kan vara bra om man vill hitta en skäggstil som passar.</p>
+	<p>Krav 1.2: den här appen kräver ingen installation. Det räcker att man besöker appen och låter appen få tillgång till user_photos för att börja använda den. Efter man gjort det kommer appen ladda ner användarens profilbild. Då kan användren dra i skäggbilden för att flytta runt den. När man håller musen över skäggbilden så kommer man även se några handtag som man kan dra i för att förändra storleken på skäggbilden. Till sist så kan man även byta ut skägget genom att klicka på en av små skäggbilderna högst upp.</p> 
+	<p>När användaren nöjt sig med hur bilden ser ut, så kan man antingen ladda ner den som en png-fil genom att klicka på "Save", eller ladda upp den som sin nya profilbild. Ifall man vill sätta bilden som profilbild, så behöver appen även tillgång till publish_actions. Ifall appen inte har det så kommer en dialog upp när man trycker på "Set as profile picture". Om man ger appen tillåtelse att göra det, så kommer en bild laddas upp till användarens konto, och sen länkas man till den färdigupladdade bilden för att bestämma om man vill sätta bilden som profilbild. Anledningen till att det sker på det här sättet är att Facebook tillåter inte appar att själva byta ut profilbilder m.h.a kod. Användaren måste alltid själv byta ut bilden. Men vad man kan göra är att man länkar användaren till en bild och lägger till &makeprofile=1 i slutet av länken. Då blir användren tillfrågad om man vill byta ut sin profilbild.</p>
+	<p>Krav 1.3 presenteras på <a href='https://github.com/woozie164/You-in-a-Beard'>min github</a></p>
+	<h2>Krav 2</h2>	
+	<p>Denna del av projektet kräver en analys av mina konkurenters produkter. Jag har lagt denna analys på <a href='http://www.student.bth.se/~malx12/javascript/Projekt/about.html'>about.html</a></p>
+	<p>Vad jag kunde se så fanns det tre andra appar med liknande funktion. Jag undersökte android-appen genom att ladda ner och använda den. iOS apparna har jag tyvärr ingen apparat som jag kan ladda ner på, men jag fick viss inblick av vad programmen erbjuder genom att kolla på deras appstore-sidor. Där fanns det screenshots och user reviews, som jag har använt som källa till min undersökning. </p>
+	<p>Alla appar verkar erbjuda liknande features, så min jämförelse påpekar att de andra apparna är till andra plattformar, och deras pris.</p>
+	<h2>Krav 3</h2>	
+	<p>Detta krav handlar om projektets omfattning och kvalite.</p>
+	<h3>Omfattning</h3>
+	<p>Själv så tycker jag att projektet är ganska omfattande. Min kod skiljer sig väsentligt ifrån den som funnits i tidigare kursmoment. Hela Facebook-api:et var någonting nytt för mig som jag behövde lära mig. Det var inte enkelt. Visserligen så finns det en hel dokumentation om api:et, men det kunde vara bättre. Mycket information som saknas i dokumentationen. T.ex. så stod det ingenting i api:et om hur man byter ut profilbilder. Eller att Facebooks send-dialog (som låter appar skicka privatmeddelanden till andra användare) inte tillåter en att länka till saker på Facebooks CDN. Man kan alltså inte länka till t.ex. en bild man laddat up på det sättet. Vilket var någonting som tog ganska lång tid för mig att komma på.</p>
+	<p>I det här projektet har jag även använt draggable och resizable från jQuery UI. Jag använde det till skäggbilden. Att bara använda en av dem på en bild är enkelt. Att få både draggable och resizable att fungera tillsammans var lite knepigare. I princip skäggbilden innuti en div som är resizable. Själva skäggbilden har CSS som säger till den att täcka upp 100% av sin containers bred och höjd. Om man sen gör container div:en resizable och draggable så fungerar det väldigt bra. Men det tog tid att komma på det, eftersom det var ingenting som gicks igenom under tidigare kursmoment.</p>
+	<h3>Kvalite</h3>
+	<p>Jag tycker mitt projektarbete har god kvalite. I projektet så har jag bl.a. lagt ner lite extra tid på appens utseende. Jag har även sett till så att appen endast kräver den priviliger som behövs när de behövs. Det är ett tips från Facebooks dokumentation, som menar att appar som kräver allt för många krav på en gång inte används.</p>
+	<h2>Krav 4</h2>
+	<p>Som krav 4 satte jag som mål att appen skulle fungera på Facebook. Tanken var att jag ville lära mig lite om Facebook-api:et. Har inte gjort en Facebook app tidigare, så jag satte det som ett optionellt krav. Ifall det inte gick att göra den här som en Facebook-app så tänkte jag försöka göra den som en vanlig webbsida. Dock så gick det bra.</p> 
+	<p>Knepigaste delen här var att Facebook vill av någon anledning inte ha en länk direkt till en html-sida, utan man ska länka till en directory eller en dynamisk sida. Har inte sett någon förklaring varför det ska vara så, men man kunde lösa det genom att döpa om html-filen till index.html. Då skickades den tillbaka så fort man besöker www.student.bth.se/~malx12/javascript/Projekt</p>
+	<h2>Krav 5</h2>
+	<p>Som krav 5 satte jag som mål att appen skulle kunna hämta information från Facebook, t.ex. användarens profilbild. I början så tänkte jag även låta användaren välja en bild ifrån sitt konto, men det blev inte så. Anledningen är att det fanns ingen inbyggd Facebook-dialog för att göra det. Vilket jag trodde det fanns, eftersom det borde vara någonting ganska vanligt som Facebook-appar behöver. Så ifall man vill göra det, så måste man skriva sin egen dialog. Det går nog, men det verkar tillräckligt komplicerat för att vara sitt eget lilla projekt. Så det blev inte av. Den funktionen känns även inte som ett krav för att appen ska fungera som det är tänkt. Den funger bra även utan om man appen bara kan använda användarens profilbild.</p>	
+	<h2>Krav 6</h2>	
+	<p>Som sista krav så ville jag att användaren skulle kunna exportera den färdiga bilden. Från början tänkte jag att man skulle kunna sätta den färdiga bilden som profilbild, och även kunna dela bilden genom att posta den på en vänns vägg.</p>
+	<p>Man kan sätta den färdiga bilden som profilbild. Det fungerar, trots att implementering av det inte blev som det var tänkt från början. Det visade sig att Facebook tillåter inte appar att ändra på profilbilder direkt med kod. Istället så måste man måste länka användaren till en bild på ett sånt sätt så att en dialog kommer upp, som frågar användaren om de vill byta profilbild. Det verkar vara det enda sättet som en app kan byta användarens profilbild.</p>
+	<p>Att dela en bild på en vänns vägg verkar inte gå. Vilket är lite konstigt. För man kan ha en share-knapp som delar saker på sin egen vägg, eller en send-knapp som skickar privatmeddelanden till andra användare. Men att ha en knapp som delar till andra användares väggar går visst inte. Och att send:a eller share:a länkar till saker som liggar på Facebooks CDN verkar inte heller gå. Detta innebär att jag inte riktigt lyckades med det som jag ville göra från början. Istället för en share-knapp, så implementerade jag en save-knapp istället. Då laddar man ner bilden som png-fil. Jag tycker det är en okej lösning, eftersom då kan användaren göra vad som helst med bilden, t.ex. dela den med andra.</p>
+	<h2>Reflektioner om projektet</h2>
+	<p>Jag tycker att projektet har gått ganska bra. Visserligen så kanske inte allt blev exakt som det var tänkt från början, men appen fungerar ändå. Jag är nöjd med min app, och jag tyckte även jag lärde mig en hel del på vägen. Bl.a. så kan det säkert vara bra att veta hur man gör ett DOM-element både draggable och resizable.</p>
+	<p>Jag tror projektets svårighet var lagom. Visserligen var det mycket strul med att få saker att fungera, men det löste sig. Och jag lyckades bli klar i tid. Så jag tror det var ett lagom svårt och stort projekt till den här kursen.</p>
+	<h2>Reflektioner om kursen</h2>	
+	<p>Jag tycker kursen har varit ganska bra. I alla fall så har jag lärt mig en hel del om webbutveckling. Visserligen så har kursen varit ganska svår, mest för att kursen är tänkt att tas efter några andra webbkurser, som jag inte tagit, men jag har klarat mig ändå. Dock så har det varit utmanade. Speciellt tidigare i kursen då man introducerar så många olika tekniker (HTML, CSS/LESS, JavaScript, ...) på en gång. Det blir mycket att lära sig om man inte har tagit kurser som tar upp de teknikerna sen tidigare. Men det gick ändå och jag tycker jag har hyffsat bra koll på det nu. Allt som allt är jag nöjd med den här kursen.</p>
+	<p>Om jag skulle ha några kommentar om kursen, så skulle det vara bl.a. längden på redovisningstexterna. 15 känns som ganska mycket, åtminstånde om man brukar skriva längre meningar. Så att t.ex. skriva 15 meningar om <i>varje</i> krav i projektets redovisisningstext känns svårt att nå. På vissa krav har jag helst enkelt inte så mycket att skriva. 15 meningar på ett vanligt kursmoment känns lite rimligare, men även där så tycker jag det är lite för mycket. Kanske 10 långa meningar är lagom.</p>
+</body>
+</html>

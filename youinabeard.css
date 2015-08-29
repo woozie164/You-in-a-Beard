@@ -1,3 +1,44 @@
+body {    
+    background: repeat center url("https://image-gr.s3.envato.com/files/93016012/mustache_hearts_blue_1_pr.jpg");    
+}
+
+#appcontainer {
+    margin: auto;
+    width: 362.912px;
+    background-color: darkseagreen;
+    border-radius: 20px;
+}
+
+#userimg {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    border-width: 4px;
+    border-color: black;
+    border-style: double;
+}
+
+#beardoptions {
+    background-color: aliceblue;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    position: relative;    
+    top: 20px;
+    width: 270px;
+}
+
+#buttonsdiv {
+    display: block;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    bottom: 20px;
+}
+
 #beard {    
     width: inherit;
     height: inherit;    
@@ -40,4 +81,13 @@
 #egrip{
      right:-5px;
      top:50%;
+}
+
+#offscreencanvas {
+    display: none;
+}
+
+.smallbeard {
+    width: 40px;
+    height: 40px;
 }

@@ -1,0 +1,11 @@
+body {    
+    background: repeat center url("https://image-gr.s3.envato.com/files/93016012/mustache_hearts_blue_1_pr.jpg");    
+}
+
+#main {
+	margin: auto;
+	padding: 10px;
+	width: 80%;
+	background-color: darkseagreen;
+	border-radius: 20px;
+}
